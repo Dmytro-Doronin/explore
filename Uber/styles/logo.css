@@ -1,0 +1,35 @@
+.logo {
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 112px;
+    -webkit-transition-property: backgroundSize;
+    -moz-transition-property: backgroundSize;
+    transition-property: backgroundSize;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    position: relative;
+    text-decoration: none;
+    text-underline-position: under;
+    will-change: background-size;
+    background-size: 0 100%, 100% 100%;
+    background-repeat: no-repeat;
+    background-image: none;
+    -webkit-box-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+    text-align: left;
+    top: 0;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 1136px) {
+    .logo {
+        font-size: 20px;
+    }
+}

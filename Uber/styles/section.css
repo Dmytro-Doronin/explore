@@ -1,10 +1,12 @@
-.section-inner {
+
+.section__inner {
     padding: 64px;
 }
 
-@media screen and (min-width: 600px) {
-    .section-inner {
-        padding: 56px 32px;
+
+@media screen and (max-width: 1136px) {
+    .section__inner {
+        padding: 54px 32px;
     }
 }
 

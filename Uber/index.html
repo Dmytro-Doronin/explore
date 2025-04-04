@@ -11,9 +11,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles/global.css"/>
+  <link rel="stylesheet" href="styles/logo.css"/>
   <link rel="stylesheet" href="styles/header.css"/>
   <link rel="stylesheet" href="styles/button.css"/>
   <link rel="stylesheet" href="styles/section.css"/>
+  <link rel="stylesheet" href="styles/hero.css"/>
+  <link rel="stylesheet" href="styles/text-field.css"/>
+  <link rel="stylesheet" href="styles/select.css"/>
   <title>Uber</title>
 </head>
 <body>
@@ -92,9 +96,120 @@
       </div>
     </header>
 
-    <section>
-      <div class="section-inner container">
-        sdsd
+    <section class="section hero">
+      <div class="section__inner container">
+        <div class="hero__wrapper">
+          <div class="hero__info">
+            <h1 class="hero__info-title">Go anywhere with Uber</h1>
+            <p class="hero__info-subtitle">Request a ride, hop in, and go.</p>
+            <div class="hero__info-control">
+              <div class="hero__info-tabs">
+                <button aria-label="Ride" class="button button__tab button__tab-active">
+                <span class="button__tab-icon button__tab-icon--active">
+                  <svg width="21" height="21" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="m20.9 9-1.5-4.6c-.3-.8-1-1.4-1.9-1.4H6.4c-.9 0-1.6.5-1.9 1.4L3 9H1v3h1v9h4v-2h12v2h4v-9h1V9h-2.1ZM5 14h4v2H5v-2Zm10 2v-2h4v2h-4ZM7.1 6h9.7l1.3 4H5.8l1.3-4Z"
+                        fill="currentColor"
+                    >
+                    </path>
+                  </svg>
+
+                </span>
+                  <span>Ride</span>
+                </button>
+                <button aria-label="Ride"  class="button button__tab ">
+                <span class="button__tab-icon">
+                  <svg width="21" height="21" viewBox="0 0 24 24" fill="none"><g fill="currentColor">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="m18.41 2.41 3.17 3.17a4.834 4.834 0 0 1 0 6.84L16.5 17.5l-10-10 5.08-5.09C12.53 1.47 13.76 1 15 1c1.24 0 2.47.47 3.41 1.41ZM13.25 8 16 10.75l2.25-2.25-2.75-2.75L13.25 8Z">
+                    </path>
+                    <path d="M2 21 .5 19.5l7.25-7.25 3.5 3.5L6 21H2Z">
+                  </path>
+                  </g>
+                  </svg>
+                </span>
+                  <span>Rent</span>
+                </button>
+              </div>
+              <form class="hero__info-form">
+                  <div class="hero__info-location-group">
+                    <div class="text-field">
+                      <div class="text-field__wrapper">
+                        <div class="text-field__icon text-field__icon--absolute">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" data-baseweb="icon"><title>search</title><path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" fill="currentColor"></path></svg>
+                        </div>
+                        <input class="text-field__input" type="text" name="location" placeholder="Pickup location"/>
+                      </div>
+                      <div class="text-field__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Pickup location" class="pe-location-fetch css-bOZeEP" role="button" tabindex="0"><path d="M10.5 13.5.5 11 21 3l-8 20.5-2.5-10Z" fill="currentColor"></path></svg>
+                      </div>
+                    </div>
+                    <div class="text-field">
+                      <div class="text-field__wrapper">
+                        <div class="text-field__icon text-field__icon--absolute">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" data-baseweb="icon"><title>search</title><path fill-rule="evenodd" clip-rule="evenodd" d="M17 7H7v10h10V7Z" fill="currentColor"></path></svg></div>
+                        <input class="text-field__input" type="text" name="s-f-location" placeholder="Drop off location"/>
+                      </div>
+                    </div>
+                    <div class="hero__info-location-line"></div>
+                  </div>
+                  <div class="hero__info-date-group">
+                    <div class="text-field">
+                      <div class="text-field__wrapper">
+                        <div class="text-field__icon text-field__icon--absolute">
+                          <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none"><title>Calendar</title><path fill-rule="evenodd" clip-rule="evenodd" d="M23 8V4h-3V1h-3v3H7V1H4v3H1v4h22Zm0 15H1V10h22v13ZM8 14H5v3h3v-3Z" fill="currentColor"></path></svg>                      </div>
+                        <input class="text-field__input" type="text" name="location" placeholder="Today"/>
+                      </div>
+                    </div>
+                    <div class="custom-select-wrapper">
+                      <svg class="custom-select-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none">
+                        <title>Clock</title>
+                        <path d="M12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1Zm6 13h-8V4h3v7h5v3Z" fill="currentColor"></path>
+                      </svg>
+
+                      <select id="city-select" class="custom-select">
+                        <option value="">Now</option>
+                        <option value="amsterdam">8:30 pm</option>
+                        <option value="rotterdam">9:30 pm</option>
+                        <option value="utrecht">10:30 pm</option>
+                      </select>
+
+                      <svg class="custom-select-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <title>open</title>
+                        <path d="M12.7071 15.2929L17.1464 10.8536C17.4614 10.5386 17.2383 10 16.7929 10H7.20711C6.76165 10 6.53857 10.5386 6.85355 10.8536L11.2929 15.2929C11.6834 15.6834 12.3166 15.6834 12.7071 15.2929Z" fill="currentColor"></path>
+                      </svg>
+                    </div>
+
+                  </div>
+                <div class="hero__info-button-group">
+                  <button class="button button--main">See price</button>
+                  <div class="hero__info-link-wrapper">
+                    <a class="hero__info-link" href="#">Log in to see your recent activity</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="hero__map">
+            <iframe
+                width="100%"
+                height="100%"
+                style="border:0; border-radius: 10px;"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.751781009386!2d4.891042415965795!3d52.37021567978792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609c83f37e4f7%3A0x579d73df4b8e1c79!2sAmsterdam!5e0!3m2!1sen!2snl!4v1640000000000!5m2!1sen!2snl">
+            </iframe>
+          </div>
+          <div class="hero__image">
+              <picture>
+                <source media="screen and (min-width: 1136px)"
+                        srcset="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_720,w_576/v1684852612/assets/ba/4947c1-b862-400e-9f00-668f4926a4a2/original/Ride-with-Uber.png, https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_1440,w_1152/v1684852612/assets/ba/4947c1-b862-400e-9f00-668f4926a4a2/original/Ride-with-Uber.png 2x">
+                <source media="screen and (min-width: 600px)" srcset="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_1340,w_1072/v1684852612/assets/ba/4947c1-b862-400e-9f00-668f4926a4a2/original/Ride-with-Uber.png, https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_2680,w_2144/v1684852612/assets/ba/4947c1-b862-400e-9f00-668f4926a4a2/original/Ride-with-Uber.png 2x">
+                <source media="screen and (min-width: 320px)" srcset="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_690,w_552/v1684852612/assets/ba/4947c1-b862-400e-9f00-668f4926a4a2/original/Ride-with-Uber.png, https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_1380,w_1104/v1684852612/assets/ba/4947c1-b862-400e-9f00-668f4926a4a2/original/Ride-with-Uber.png 2x">
+                <img alt="Ride with Uber" src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_690,w_552/v1684852612/assets/ba/4947c1-b862-400e-9f00-668f4926a4a2/original/Ride-with-Uber.png" aria-hidden="true" role="presentation" class="hero__image-img">
+              </picture>
+          </div>
+        </div>
       </div>
     </section>
 
