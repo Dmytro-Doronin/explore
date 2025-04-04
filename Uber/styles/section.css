@@ -1,0 +1,15 @@
+.section-inner {
+    padding: 64px;
+}
+
+@media screen and (min-width: 600px) {
+    .section-inner {
+        padding: 56px 32px;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .section-inner {
+        padding: 40px 24px;
+    }
+}
