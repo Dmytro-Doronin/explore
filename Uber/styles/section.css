@@ -3,6 +3,12 @@
     padding: 64px;
 }
 
+.section__title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    margin-bottom: 36px;
+}
 
 @media screen and (max-width: 1136px) {
     .section__inner {
