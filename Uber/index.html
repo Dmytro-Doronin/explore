@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="styles/select.css"/>
   <link rel="stylesheet" href="styles/suggestions.css"/>
   <link rel="stylesheet" href="styles/activity.css"/>
+  <link rel="stylesheet" href="styles/plan.css"/>
   <title>Uber</title>
 </head>
 <body>
@@ -233,7 +234,7 @@
                   <button class="button button--secondary">Details</button>
                 </div>
                 <div class="suggestions__list-link-image">
-                  <img src="./assets/1.png" alt="Rental">
+                  <img src="assets/suggestion/1.png" alt="Rental">
                 </div>
               </a>
             </li>
@@ -249,7 +250,7 @@
                   <button class="button button--secondary">Details</button>
                 </div>
                 <div class="suggestions__list-link-image">
-                  <img src="./assets/2.png" alt="Reserve">
+                  <img src="assets/suggestion/2.png" alt="Reserve">
                 </div>
               </a>
             </li>
@@ -265,7 +266,7 @@
                   <button class="button button--secondary">Details</button>
                 </div>
                 <div class="suggestions__list-link-image">
-                  <img src="./assets/3.png" alt="Ride">
+                  <img src="assets/suggestion/3.png" alt="Ride">
                 </div>
               </a>
             </li>
@@ -279,7 +280,7 @@
       <div class="section__inner container">
           <div class="activity__wrapper">
             <div class="activity__info">
-              <h2 class="activity__info-title">Log in to see your recent activity</h2>
+              <h2 class="section__title">Log in to see your recent activity</h2>
               <div class="activity__info-description">
                 <p >View past trips, tailored suggestions, support resources, and more.</p>
               </div>
@@ -302,6 +303,82 @@
           </div>
       </div>
     </section>
+
+    <section class="section plan">
+      <div class="section__inner container">
+        <h2 class="section__title">Plan for later</h2>
+        <div class="plan__wrapper">
+          <div class="plan__calendar">
+            <div class="plan__calendar-buttons">
+                <button class="button button--middle">Reserve</button>
+                <button class="button button--secondary button--middle">Rent</button>
+            </div>
+
+            <div class="plan__calendar-date">
+              <h2 class="section__title">Get your ride right with Uber Reserve</h2>
+              <p class="plan__calendar-subtitle">Choose date and time</p>
+              <div class="plan__calendar-date-group">
+                <div class="text-field">
+                  <div class="text-field__wrapper">
+                    <div class="text-field__icon text-field__icon--absolute">
+                      <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none"><title>Calendar</title><path fill-rule="evenodd" clip-rule="evenodd" d="M23 8V4h-3V1h-3v3H7V1H4v3H1v4h22Zm0 15H1V10h22v13ZM8 14H5v3h3v-3Z" fill="currentColor"></path></svg>                      </div>
+                    <input class="text-field__input" type="text" value="Apr 5" name="location" placeholder="Today">
+                  </div>
+                </div>
+                <div class="custom-select-wrapper">
+                  <svg class="custom-select-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none">
+                    <title>Clock</title>
+                    <path d="M12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1Zm6 13h-8V4h3v7h5v3Z" fill="currentColor"></path>
+                  </svg>
+
+                  <select id="city" class="custom-select">
+                    <option value="">2:29pm</option>
+                    <option value="amsterdam">2:30 pm</option>
+                    <option value="rotterdam">3:30 pm</option>
+                    <option value="utrecht">4:30 pm</option>
+                  </select>
+
+                  <svg class="custom-select-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <title>open</title>
+                    <path d="M12.7071 15.2929L17.1464 10.8536C17.4614 10.5386 17.2383 10 16.7929 10H7.20711C6.76165 10 6.53857 10.5386 6.85355 10.8536L11.2929 15.2929C11.6834 15.6834 12.3166 15.6834 12.7071 15.2929Z" fill="currentColor"></path>
+                  </svg>
+                </div>
+              </div>
+              <button class="button width-100 button--large">Next</button>
+            </div>
+          </div>
+          <div class="plan__info">
+            <div class="plan__info-wrapper">
+              <h3 class="plan__info-title">Benefits</h3>
+              <ul class="plan__info-list">
+                <li class="plan__info-list-item">
+                  <div class="plan__info-list-icon">
+                    <img src="./assets/plan/calendar-filled.svg" alt="calendar">
+                  </div>
+                  <div class="plan__info-list-description">Choose your exact pickup time up to 90 days in advance.</div>
+                </li>
+                <li class="plan__info-list-item">
+                  <div class="plan__info-list-icon">
+                    <img src="./assets/plan/anytime.svg" alt="anytime">
+                  </div>
+                  <div class="plan__info-list-description">Extra wait time included to meet your ride.</div>
+                </li>
+                <li class="plan__info-list-item">
+                  <div class="plan__info-list-icon">
+                    <img src="./assets/plan/credit_card-filled.svg" alt="credit_card">
+                  </div>
+                  <div class="plan__info-list-description">Cancel at no charge up to 60 minutes in advance.</div>
+                </li>
+              </ul>
+              <a aria-label="See terms and conditions for Uber Reserve" href="#" target="_self" class="plan__info-link" >See terms</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
   </main>
 </body>
 </html>

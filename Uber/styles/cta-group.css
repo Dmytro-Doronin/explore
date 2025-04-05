@@ -63,3 +63,9 @@
     transform: scaleX(1);
 }
 
+@media screen and (max-width: 1136px) {
+    .cta-group__column {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+}
