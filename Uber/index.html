@@ -16,9 +16,11 @@
   <link rel="stylesheet" href="styles/button.css"/>
   <link rel="stylesheet" href="styles/section.css"/>
   <link rel="stylesheet" href="styles/hero.css"/>
+  <link rel="stylesheet" href="styles/cta-group.css"/>
   <link rel="stylesheet" href="styles/text-field.css"/>
   <link rel="stylesheet" href="styles/select.css"/>
   <link rel="stylesheet" href="styles/suggestions.css"/>
+  <link rel="stylesheet" href="styles/activity.css"/>
   <title>Uber</title>
 </head>
 <body>
@@ -181,10 +183,10 @@
                     </div>
 
                   </div>
-                <div class="hero__info-button-group">
+                <div class="cta-group">
                   <button class="button button--main">See price</button>
-                  <div class="hero__info-link-wrapper">
-                    <a class="hero__info-link" href="#">Log in to see your recent activity</a>
+                  <div class="cta-group__link-wrapper">
+                    <a class="cta-group__link" href="#">Log in to see your recent activity</a>
                   </div>
                 </div>
               </form>
@@ -215,7 +217,7 @@
     </section>
 
     <section class="section">
-      <div class="section-inner container">
+      <div class="section__inner container">
         <h2 class="section__title">Suggestions</h2>
         <div class="suggestions__wrapper">
           <ul class="suggestions__list">
@@ -270,6 +272,34 @@
 
           </ul>
         </div>
+      </div>
+    </section>
+
+    <section class="section activity">
+      <div class="section__inner container">
+          <div class="activity__wrapper">
+            <div class="activity__info">
+              <h2 class="activity__info-title">Log in to see your recent activity</h2>
+              <div class="activity__info-description">
+                <p >View past trips, tailored suggestions, support resources, and more.</p>
+              </div>
+              <div class="cta-group cta-group__column">
+                <button class="button button--main">Log in to your account</button>
+                <div class="cta-group__link-wrapper">
+                  <a class="cta-group__link" href="#">Don’t have an Uber account? Sign up</a>
+                </div>
+              </div>
+            </div>
+            <div class="activity__image">
+              <picture>
+                <source media="screen and (min-width: 1136px)"
+                        srcset="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_384,w_576/v1730197725/assets/0f/48c7ba-da13-4fdc-b54c-42878042f513/original/Airport-Fall.png, https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_768,w_1152/v1730197725/assets/0f/48c7ba-da13-4fdc-b54c-42878042f513/original/Airport-Fall.png 2x">
+                <source media="screen and (min-width: 600px)" srcset="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_715,w_1072/v1730197725/assets/0f/48c7ba-da13-4fdc-b54c-42878042f513/original/Airport-Fall.png, https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_1429,w_2144/v1730197725/assets/0f/48c7ba-da13-4fdc-b54c-42878042f513/original/Airport-Fall.png 2x">
+                <source media="screen and (min-width: 320px)" srcset="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_368,w_552/v1730197725/assets/0f/48c7ba-da13-4fdc-b54c-42878042f513/original/Airport-Fall.png, https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_736,w_1104/v1730197725/assets/0f/48c7ba-da13-4fdc-b54c-42878042f513/original/Airport-Fall.png 2x">
+                <img alt="Ride with Uber" src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_368,w_552/v1730197725/assets/0f/48c7ba-da13-4fdc-b54c-42878042f513/original/Airport-Fall.png" aria-hidden="true" role="presentation" class="css-ZwMiT">
+              </picture>
+            </div>
+          </div>
       </div>
     </section>
   </main>
