@@ -1,89 +1,123 @@
-//part 1
+//1 part
 
-let age = prompt("Enter your age:");
-let ageNum = Number(age);
+let firstName = 'John';
+let lastName = 'Doe';
+let country = 'USA';
+let city = 'New York';
+let age = 30;
+let isMarried = false;
+let year = 2025;
 
-if (ageNum >= 18) {
-    console.log("You are old enough to drive.");
+console.log(typeof firstName);  // string
+console.log(typeof lastName);   // string
+console.log(typeof country);    // string
+console.log(typeof city);       // string
+console.log(typeof age);        // number
+console.log(typeof isMarried);  // boolean
+console.log(typeof year);       // number
+
+
+console.log(typeof '10' === typeof 10); // false
+
+console.log(parseInt('9.8') === 10); // false
+
+console.log(Boolean(1));         // true
+console.log(Boolean('hello'));  // true
+console.log(Boolean([]));       // true
+
+console.log(Boolean(0));         // false
+console.log(Boolean(null));      // false
+console.log(Boolean(undefined)); // false
+
+console.log(4 > 3);       // true
+console.log(4 >= 3);      // true
+console.log(4 < 3);       // false
+console.log(4 <= 3);      // false
+console.log(4 == 4);      // true
+console.log(4 === 4);     // true
+console.log(4 != 4);      // false
+console.log(4 !== 4);     // false
+console.log(4 != '4');    // false
+console.log(4 == '4');    // true
+console.log(4 === '4');   // false
+
+let python = 'python';
+let jargon = 'jargon';
+
+console.log(python.length === jargon.length); // true
+console.log(python.length !== jargon.length); // false (falsy statement)
+
+
+console.log(4 > 3 && 10 < 12);         // true
+console.log(4 > 3 && 10 > 12);         // false
+console.log(4 > 3 || 10 < 12);         // true
+console.log(4 > 3 || 10 > 12);         // true
+console.log(!(4 > 3));                 // false
+console.log(!(4 < 3));                 // true
+console.log(!false);                  // true
+console.log(!(4 > 3 && 10 < 12));      // false
+console.log(!(4 > 3 && 10 > 12));      // true
+console.log(!(4 === '4'));             // true
+
+console.log(!('dragon'.includes('on') && 'python'.includes('on'))); // false
+
+
+const now = new Date();
+
+console.log('Year:', now.getFullYear());
+console.log('Month:', now.getMonth() + 1);
+console.log('Date:', now.getDate());
+console.log('Day:', now.getDay());
+console.log('Hours:', now.getHours());
+console.log('Minutes:', now.getMinutes());
+console.log('Seconds since 1970:', Math.floor(now.getTime() / 1000));
+
+//Part 2
+
+let base = prompt("Enter base:");
+let height = prompt("Enter height:");
+let area = 0.5 * base * height;
+console.log(`The area of the triangle is ${area}`);
+
+let a = prompt("Enter side a:");
+let b = prompt("Enter side b:");
+let c = prompt("Enter side c:");
+let perimeter = Number(a) + Number(b) + Number(c);
+console.log(`The perimeter of the triangle is ${perimeter}`);
+
+let length = prompt("Enter length:");
+let width = prompt("Enter width:");
+let rectArea = length * width;
+let rectPerimeter = 2 * (Number(length) + Number(width));
+console.log(`Area: ${rectArea}, Perimeter: ${rectPerimeter}`);
+
+let radius = prompt("Enter radius:");
+const pi = 3.14;
+let circleArea = pi * radius * radius;
+let circumference = 2 * pi * radius;
+console.log(`Area: ${circleArea}, Circumference: ${circumference}`);
+
+// y = 2x - 2
+console.log('Slope:', 2);
+console.log('Y-intercept:', -2);
+console.log('X-intercept:', 1);
+
+let slope = (10 - 2) / (6 - 2); // = 8 / 4 = 2
+console.log('Slope between points:', slope);
+
+console.log('Slopes are equal:', 2 === 2); // true
+
+let hours = prompt("Enter hours:");
+let rate = prompt("Enter rate per hour:");
+let salary = hours * rate;
+console.log(`Your weekly earning is ${salary}`);
+
+
+let name = prompt("Enter your name:");
+if (name.length > 7) {
+    console.log("Your name is long");
 } else {
-    let yearsLeft = 18 - ageNum;
-    console.log(`You are left with ${yearsLeft} year${yearsLeft > 1 ? 's' : ''} to drive.`);
+    console.log("Your name is short");
 }
 
-let myAge = 25;
-let yourAge = prompt("Enter your age:");
-yourAge = Number(yourAge);
 
-if (yourAge > myAge) {
-    console.log(`You are ${yourAge - myAge} year(s) older than me.`);
-} else if (yourAge < myAge) {
-    console.log(`I am ${myAge - yourAge} year(s) older than you.`);
-} else {
-    console.log("We are the same age!");
-}
-
-let a = 4;
-let b = 3;
-
-if (a > b) {
-    console.log(`${a} is greater than ${b}`);
-} else {
-    console.log(`${a} is less than ${b}`);
-}
-
-a > b ? console.log(`${a} is greater than ${b}`) : console.log(`${a} is less than ${b}`);
-
-
-let number = prompt("Enter a number:");
-number = Number(number);
-
-if (number % 2 === 0) {
-    console.log(`${number} is an even number`);
-} else {
-    console.log(`${number} is an odd number`);
-}
-
-//part 2
-
-let score = prompt("Enter student score:");
-score = Number(score);
-
-if (score >= 80 && score <= 100) {
-    console.log("Grade: A");
-} else if (score >= 70 && score <= 79) {
-    console.log("Grade: B");
-} else if (score >= 60 && score <= 69) {
-    console.log("Grade: C");
-} else if (score >= 50 && score <= 59) {
-    console.log("Grade: D");
-} else if (score >= 0 && score <= 49) {
-    console.log("Grade: F");
-} else {
-    console.log("Invalid score");
-}
-
-let month = prompt("Enter month:").toLowerCase();
-
-if (["september", "october", "november"].includes(month)) {
-    console.log("The season is Autumn.");
-} else if (["december", "january", "february"].includes(month)) {
-    console.log("The season is Winter.");
-} else if (["march", "april", "may"].includes(month)) {
-    console.log("The season is Spring.");
-} else if (["june", "july", "august"].includes(month)) {
-    console.log("The season is Summer.");
-} else {
-    console.log("Invalid month name.");
-}
-
-let day = prompt("What is the day today?").toLowerCase();
-
-if (["saturday", "sunday"].includes(day)) {
-    console.log(`${day.charAt(0).toUpperCase() + day.slice(1)} is a weekend.`);
-} else if (
-    ["monday", "tuesday", "wednesday", "thursday", "friday"].includes(day)
-) {
-    console.log(`${day.charAt(0).toUpperCase() + day.slice(1)} is a working day.`);
-} else {
-    console.log("Invalid day name.");
-}
